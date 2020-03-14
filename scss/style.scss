@@ -1,0 +1,434 @@
+
+$backgroundDark: #0B0B0B;
+$backgroundColor: #690102;
+$textColorLight: #fff;
+$textColorDark: #0B0B0B;
+$textColor: #B70021;
+$fontRoboto: 'Roboto', sans-serif;
+$fontRobotoCondensed: 'Roboto Condensed', sans-serif;
+$fontAlternative: Arial, Helvetica, sans-serif;
+
+@mixin wrapper() {
+    max-width: 1230px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+@mixin flex() {
+    display: flex;
+    justify-content: space-between;
+}
+@mixin button() {
+    font-style: normal;
+    font-weight: bold;
+    border: 1px solid #FFFFFF;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 30px 62px;
+    transition: background .3s;
+    display: inline-block;
+    &:hover {
+        background: $backgroundColor;
+    }
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background-color: $backgroundDark; 
+    color: $textColorLight;
+    font-size: 24px;
+    line-height: 28px; 
+    font-family: 'Roboto Condensed', sans-serif;
+    font-weight: 400;
+}
+a {
+    color: $textColorLight;
+    text-decoration: none;
+}
+.header {
+    height: 100vh;
+    position: absolute;
+    z-index: 5;
+    background: rgba(0, 0, 0, 0.3);
+    right: 0;
+    left: 0;
+    .container {
+        @include wrapper();
+    }
+    .header-top {
+        @include flex();
+        .logo {
+            padding-top: 36px;
+            margin-bottom: 29px;
+        }
+        .header-btn {
+            width: 60px;
+            height: 60px;
+            border: 1px solid $textColorLight;
+            margin-top: 31px;
+            background: rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            position: relative;
+            @include flex();
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: all .3s;
+            div {
+                width: 36px;
+                height: 2px;
+                background-color: $textColorLight;
+                margin: 5px 0;
+            }
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+    }
+    .header-content {
+
+		// .header-content__title
+
+		&__title {
+            font-style: normal;
+            font-weight: normal;
+            font-size: 96px;
+            line-height: 112px;
+            margin-bottom: 40px;
+
+		}
+
+		// .header-content__text
+
+		&__text {
+            font-family: $fontRoboto;
+            font-style: normal;
+            font-weight: normal;
+            max-width: 284px;
+            line-height: 28px;
+            padding-bottom: 24px;
+		}
+
+		// .header-content__btn
+
+		&__btn {
+            @include button();
+		}
+    }
+}
+.menu {
+    background-color: $backgroundDark;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    transition: all .5s;
+    z-index: 7;
+    .container {
+        @include wrapper();
+    }
+    .container-menu {
+        position: relative;
+    }
+    .close-btn {
+        width: 50px;
+        height: 50px;
+        position: absolute;
+        top: 31px;
+        right: 15px;
+        transition: all .3s;
+        cursor: pointer;
+        &::before,
+        &::after {
+            content: "";
+            height: 2px;
+            width: 70px;
+            background-color: $textColorLight;
+            position: absolute;
+            transform-origin: left;
+            transition: all .3s;
+        }
+        &::after {
+            transform: rotate(45deg);
+        }
+        &::before {
+            transform: rotate(-45deg);
+            bottom: -1px;
+        }
+        &:hover {
+            &::after,
+            &::before{
+                background-color: $textColor;
+            } 
+        }
+    }
+    .menu__list {
+        height: 100vh;
+        @include flex();
+        align-items: center;
+        ul {
+            list-style: none;
+        }
+        a {
+            text-decoration: none;
+            color: $textColorLight;
+            font-size: 48px;
+            line-height: 56px;
+            font-weight: 700;
+            padding: 30px 25px 14px 0;
+            border-bottom: 3px solid $textColor;
+            display: inline-block;
+            min-width: 368px;
+            transition: all .3s;
+            &:hover {
+                border-bottom: 3px solid $textColorLight;
+                color: $textColor;
+                transform: scale(1.1);
+                margin-left: 36px;
+            }
+        }
+    }
+    &.active {
+        left: 0;
+        }  
+    }
+
+.slider-top {
+    .slider {
+        position: relative;
+
+		// .slider__item
+
+		&__item {
+            height: 100vh;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+
+        .slick-dots {
+            @include wrapper();
+            margin-top: -55px;
+            position: relative;
+            z-index: 6;
+            button {
+                border-radius: 50%;
+                background-color: $backgroundDark;
+                width: 15px;
+                height: 15px;
+                font-size: 0;
+                padding: 0;
+                outline: none;
+                border: none;
+                }
+            .slick-active {
+                button {
+                    background-color: $textColorLight;
+                }
+            }   
+            li {
+                display: inline-block;
+                margin: 0 5px;
+            }
+        } 
+    }
+}
+.proporties {
+    @include wrapper();
+    margin: 105px auto 100px;
+}
+.proporties-items {
+    @include flex();
+    justify-content: space-around ;
+}
+.proporties-item {
+    text-align: center;
+        // .ptoporties-item__title
+
+    &__title { 
+        margin-bottom: 19px;
+    }
+
+	// .proporties-item__num
+
+	&__num {
+        font-size: 96px;
+        line-height: 112px;
+        margin-bottom: 7px;
+        font-family: $fontRobotoCondensed;
+        span {
+            font-size: 40px;
+            line-height: 28px;
+        }
+	}
+	// .proporties-item__descr
+
+	&__descr {
+        color: $textColor;
+    } 
+    .proporties-item-num__index {
+        span {
+            display: inline-block;
+            position: relative;
+        }
+    } 
+}
+
+section {
+    .container {
+        @include wrapper();
+    }
+    &.video {
+        padding-bottom: 100px;
+    }
+}
+
+.advantages {
+
+		// .advantages__title
+
+		&__title {
+            color: $textColor;
+            font-size: 36px;
+            line-height: 42px;
+            position: absolute;
+            top: 0;
+            &.advantages__title-belowe {
+                bottom: 0;
+                right: 0;
+                top: auto;
+            }
+		}
+
+		// .advantages__text
+
+		&__text {
+            max-width: 303px;
+            ul {
+                list-style: none; 
+            }
+		}
+
+		// .advantages__img
+
+		&__img {
+        }
+    .container {
+    @include wrapper();
+}
+    .advantages-inner {
+
+            // .advantages-inner__row
+
+            &__row {
+                @include flex();
+                margin-bottom: 100px;
+                align-items: center;
+                position: relative;
+            }
+    }
+    .advantages-descr {
+        max-width: 570px;
+        width: 100%;
+    }
+}
+.design {
+    .container {
+    @include wrapper();
+}
+
+	// .design__images
+
+	&__images {
+         margin-bottom: 100px;
+    }
+    .design-description {
+        @include flex();
+        justify-content: space-around;
+        margin-bottom: 100px;
+        
+        // .design-description__items
+
+        &__items {
+            padding-right: 15px;
+            @include flex();
+            max-width: 570px;
+            width: 100%;
+        }
+
+        // .design-description__item-num
+
+        &__item-num {
+            color: $textColor;
+        }
+
+        // .design-description__item-text
+
+        &__item-text {
+            padding-top: 25px;
+            max-width: 430px;
+        }
+    }
+}
+
+.footer {
+    background-color: $textColor;
+    
+    .container {
+        @include wrapper();
+        text-align: center;
+}
+    a.footer-btn {
+        @include button();
+        &:hover {
+            background-color: $backgroundDark;
+        }
+        margin-top: 83px;
+    }
+    .footer-copy {
+        padding: 83px 0 20px;
+        text-align: center;
+        font-weight: 700;
+        ul {
+            list-style: none;
+        }
+        li {
+        display: inline-block;
+        padding: 0 10px;
+        position: relative;
+            &+li {
+                    &::before {
+                    content: "|";
+                    position: absolute;
+                    left: -5px;
+                }
+            }
+            a {
+                transition: color .3s;
+                &:hover {
+                    color: rgba(255, 255, 255, 0.5);
+                }
+            }
+            
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
