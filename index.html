@@ -34,10 +34,60 @@
         <p class="header-content__text">
           The Audi Q7 is a versatile luxury SUV for the whole family
         </p>
-        <a href="#" class="header-content__btn">I want a test drive</a>
+        <a href="#" id="popupOpen" class="header-content__btn">I want a test drive</a>
       </div>
     </div>
   </header>
+
+  <div class="popup">
+    <div class="popup-content">
+      <span class="close">&times;</span>
+      <div class="popup-form">
+        <form action="#" method="POST">
+          <div class="choose-car">
+            <ul class="donate-now">
+              <li class="donate-now-item">
+                <input type="radio" id="a25" name="amount" />
+                <label for="a25">Q7</label>
+              </li>
+              <li class="donate-now-item">
+                <input type="radio" id="a50" name="amount" />
+                <label for="a50">SQ7</label>
+              </li>
+              <li class="donate-now-item">
+                <input type="radio" id="a75" name="amount" checked="checked" />
+                <label for="a75">Q7 TFSI</label>
+              </li>
+
+            </ul>
+
+          </div>
+
+          <label for="name">Name:</label>
+          <input type="text" id="name" placeholder="Firs Name">
+
+          <label for="lname">Last name:</label>
+          <input type="text" placeholder="Last Name">
+
+
+          <label for="tel">Phone:</label>
+          <input type="tel" placeholder="" value="+38 0" placeholder="00 000 00 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+            required>
+
+          <label for="mail">E-mail:</label>
+          <input type="mail" placeholder="E-mail">
+
+          <label for="date">Select the desired drive test date:</label>
+          <input type="date">
+
+          <label for="time">select the desired test drive time:</label>
+          <input type="time">
+
+          <input type="button" value="Get new emotion">
+        </form>
+      </div>
+    </div>
+  </div>
 
   <nav class="menu">
     <div class="container container-menu">
@@ -186,6 +236,17 @@
     </div>
   </section>
 
+  <section class="slider-bottom">
+    <div class="slider-bottom-items">
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-1.jpg);"></div>
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-2.jpg);"></div>
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-3.jpg);"></div>
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-4.jpg);"></div>
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-5.jpg);"></div>
+      <div class="slider-bottom__item" style="background-image: url(images/second-slider-6.jpg);"></div>
+    </div>
+  </section>
+
   <footer class="footer">
     <div class="container">
       <a href="#" class="footer-btn">I want a test drive</a>
@@ -205,6 +266,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/main.js"></script>
+  <script src="js/second-slider.js"></script>
 </body>
 
 </html>

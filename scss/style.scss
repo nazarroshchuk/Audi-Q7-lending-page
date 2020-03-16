@@ -3,7 +3,7 @@ $backgroundDark: #0B0B0B;
 $backgroundColor: #690102;
 $textColorLight: #fff;
 $textColorDark: #0B0B0B;
-$textColor: #B70021;
+$textColor: #ff120acc;
 $fontRoboto: 'Roboto', sans-serif;
 $fontRobotoCondensed: 'Roboto Condensed', sans-serif;
 $fontAlternative: Arial, Helvetica, sans-serif;
@@ -25,6 +25,10 @@ $fontAlternative: Arial, Helvetica, sans-serif;
     padding: 30px 62px;
     transition: background .3s;
     display: inline-block;
+    font-family: Roboto Condensed;
+    font-size: 24px;
+    line-height: 28px;
+    cursor: pointer;
     &:hover {
         background: $backgroundColor;
     }
@@ -371,7 +375,6 @@ section {
         }
     }
 }
-
 .footer {
     background-color: $textColor;
     
@@ -414,6 +417,150 @@ section {
         }
     }
 }
+.slider-bottom {
+    position: relative;
+    padding: 5px 0;
+    .slider-bottom__item {
+        height: 30vh;
+        width: auto;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        margin: 0 2px; 
+    }
+    button.slick-arrow {
+        position: absolute;
+        width: 40px;
+        height: 60px;
+        border: medium none;
+        background-repeat: no-repeat ;
+        background-position: center;
+        background-color: transparent;
+        font-size: 0;
+        cursor: pointer;
+        outline: none;
+        z-index: 5;
+    }
+    button.slick-next.slick-arrow {
+        background-image: url(/images/baseline_arrow_right_alt_white_18dp.png);
+        top: 40%;
+        right: 0;
+    }
+    .slick-prev.slick-arrow {
+       
+        background-image: url(/images/baseline_arrow_left_alt_white_18dp.png);
+        top: 40%;
+        left: 0;
+    }
+}
+.popup {
+    display: block;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    .popup-content {
+        position: relative;
+        background-color: $textColorLight;
+        margin: 5% auto;
+        width: 80%;
+        width: 500px;
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        .close {
+            position: absolute;
+            right: 5%;
+            top: 5%;
+            color: $textColorLight;
+            font-size: 50px;
+            cursor: pointer;
+        }
+        .popup-form {
+            margin: 0 auto;
+            margin: 30px;
+            padding: 50px;
+        }
+        form {
+            @include flex();
+            flex-direction: column;
+            justify-content: start;
+            .choose-car {
+                
+            }
+            input {
+                outline: red;
+                padding-bottom: 12px;
+                margin-bottom: 20px;
+                background-color: transparent;
+                border: none;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                font-size: 16px;
+            }
+            input[type=button] {
+                @include button();
+                margin-top: 50px;
+            }
+        }
+        label {
+            color: $textColorLight;
+            font-size: 10px;
+        }
+        
+    }
+    
+}
+
+.donate-now {
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  @include flex();
+  justify-content: space-between;
+  padding-bottom: 100px;
+}
+
+.donate-now li {
+  margin: 0 5px 0 0;
+  height: 40px;
+}
+
+.donate-now label,
+.donate-now input {
+  display: block;
+}
+.donate-now input {
+    display: none;
+}
+
+.donate-now input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.donate-now input[type="radio"]:checked+label,
+.Checked+label {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.donate-now .donate-now-item label {
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  width: 100px;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.donate-now label:hover {
+  background: $backgroundColor;
+}
+
 
 
 
