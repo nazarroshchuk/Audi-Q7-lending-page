@@ -584,6 +584,22 @@ section.video {
   font-size: 16px;
 }
 
+.popup .popup-content form input::-webkit-input-placeholder {
+  color: #fff;
+}
+
+.popup .popup-content form input:-ms-input-placeholder {
+  color: #fff;
+}
+
+.popup .popup-content form input::-ms-input-placeholder {
+  color: #fff;
+}
+
+.popup .popup-content form input::placeholder {
+  color: #fff;
+}
+
 .popup .popup-content form input[type=button] {
   font-style: normal;
   font-weight: bold;
@@ -620,7 +636,7 @@ section.video {
       -ms-flex-pack: justify;
           justify-content: space-between;
   justify-content: space-between;
-  padding-bottom: 100px;
+  padding: 10px 0 50px 0;
 }
 
 .donate-now li {

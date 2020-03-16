@@ -500,6 +500,9 @@ section {
                 border-bottom: 1px solid #fff;
                 color: #fff;
                 font-size: 16px;
+                &::placeholder {
+                    color: $textColorLight;
+                }
             }
             input[type=button] {
                 @include button();
@@ -521,7 +524,7 @@ section {
   padding: 0;
   @include flex();
   justify-content: space-between;
-  padding-bottom: 100px;
+  padding: 10px 0 50px 0;
 }
 
 .donate-now li {
