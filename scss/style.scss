@@ -118,6 +118,7 @@ a {
 
 		&__btn {
             @include button();
+            margin-top: 35px;
 		}
     }
 }
