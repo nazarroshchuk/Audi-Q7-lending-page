@@ -23,14 +23,28 @@ const footerBtn = document.querySelector('.footer-btn');
 openPopupButton.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupWindow.style.display = 'block';
-})
+});
+
 footerBtn.addEventListener('click', function (evt) {
     evt.preventDefault();
     popupWindow.style.display = 'block';
-})
+});
 
 closeButton.addEventListener('click', function () {
     popupWindow.style.display = 'none';
-})
+});
+
+document.addEventListener('click', function (evt) {
+    if (evt.target === popupWindow) {
+        popupWindow.style.display = 'none';
+    }
+});
+
+document.addEventListener('keydown', function (evt) {
+    if (evt.keyCode === 27) {
+        popupWindow.style.display = 'none';
+    }
+});
+
 
 
