@@ -483,13 +483,9 @@ section.video {
   padding: 5px 0;
 }
 
-.slider-bottom .slider-bottom__item {
-  height: 30vh;
-  width: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+.slider-bottom .slider-bottom-items img.slider-bottom-item {
   margin: 0 2px;
+  width: 1000px;
 }
 
 .slider-bottom button.slick-arrow {
@@ -506,7 +502,7 @@ section.video {
   z-index: 5;
 }
 
-.slider-bottom button.slick-next.slick-arrow {
+.slider-bottom .slick-next.slick-arrow {
   background-image: url(/images/baseline_arrow_right_alt_white_18dp.png);
   top: 40%;
   right: 0;
@@ -574,6 +570,57 @@ section.video {
           justify-content: start;
 }
 
+.popup .popup-content form .donate-now {
+  list-style-type: none;
+  margin: 25px 0 0 0;
+  padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  justify-content: space-between;
+  padding: 10px 0 50px 0;
+}
+
+.popup .popup-content form .donate-now li {
+  margin: 0 5px 0 0;
+  height: 40px;
+}
+
+.popup .popup-content form .donate-now label,
+.popup .popup-content form .donate-now input {
+  display: block;
+}
+
+.popup .popup-content form .donate-now input {
+  display: none;
+}
+
+.popup .popup-content form .donate-now input[type="radio"] {
+  opacity: 0.01;
+  z-index: 100;
+}
+
+.popup .popup-content form .donate-now input[type="radio"]:checked + label {
+  background: rgba(255, 255, 255, 0.4);
+}
+
+.popup .popup-content form .donate-now .donate-now-item label {
+  border: 1px solid #CCC;
+  cursor: pointer;
+  z-index: 90;
+  width: 100px;
+  text-align: center;
+  font-size: 22px;
+  padding: 10px 0;
+}
+
+.popup .popup-content form .donate-now .donate-now-item label:hover {
+  background: #690102;
+}
+
 .popup .popup-content form input {
   outline: red;
   padding-bottom: 12px;
@@ -624,57 +671,5 @@ section.video {
 .popup .popup-content label {
   color: #fff;
   font-size: 10px;
-}
-
-.donate-now {
-  list-style-type: none;
-  margin: 25px 0 0 0;
-  padding: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  justify-content: space-between;
-  padding: 10px 0 50px 0;
-}
-
-.donate-now li {
-  margin: 0 5px 0 0;
-  height: 40px;
-}
-
-.donate-now label,
-.donate-now input {
-  display: block;
-}
-
-.donate-now input {
-  display: none;
-}
-
-.donate-now input[type="radio"] {
-  opacity: 0.01;
-  z-index: 100;
-}
-
-.donate-now input[type="radio"]:checked + label,
-.donate-now .Checked + label {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.donate-now .donate-now-item label {
-  border: 1px solid #CCC;
-  cursor: pointer;
-  z-index: 90;
-  width: 100px;
-  text-align: center;
-  font-size: 22px;
-  padding: 10px 0;
-}
-
-.donate-now .donate-now-item label:hover {
-  background: #690102;
 }
 /*# sourceMappingURL=style.css.map */

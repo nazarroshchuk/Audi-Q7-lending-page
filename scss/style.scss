@@ -314,11 +314,6 @@ section {
                 list-style: none; 
             }
 		}
-
-		// .advantages__img
-
-		&__img {
-        }
     .container {
     @include wrapper();
 }
@@ -421,13 +416,11 @@ section {
 .slider-bottom {
     position: relative;
     padding: 5px 0;
-    .slider-bottom__item {
-        height: 30vh;
-        width: auto;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center;
-        margin: 0 2px; 
+    .slider-bottom-items {
+        img.slider-bottom-item {
+            margin: 0 2px; 
+            width: 1000px;
+        }   
     }
     button.slick-arrow {
         position: absolute;
@@ -442,7 +435,7 @@ section {
         outline: none;
         z-index: 5;
     }
-    button.slick-next.slick-arrow {
+    .slick-next.slick-arrow {
         background-image: url(/images/baseline_arrow_right_alt_white_18dp.png);
         top: 40%;
         right: 0;
@@ -489,8 +482,45 @@ section {
             @include flex();
             flex-direction: column;
             justify-content: start;
-            .choose-car {
-                
+            .donate-now {
+                list-style-type: none;
+                margin: 25px 0 0 0;
+                padding: 0;
+                @include flex();
+                justify-content: space-between;
+                padding: 10px 0 50px 0;
+                li {
+                    margin: 0 5px 0 0;
+                    height: 40px;
+                }
+                label,
+                input {
+                    display: block;
+                }
+                input {
+                    display: none;
+                }
+                input[type="radio"] {
+                    opacity: 0.01;
+                    z-index: 100;
+                }
+                input[type="radio"]:checked+label {
+                    background: rgba(255, 255, 255, 0.4); 
+                }
+                .donate-now-item {
+                      label {
+                        border: 1px solid #CCC;
+                        cursor: pointer;
+                        z-index: 90;
+                        width: 100px;
+                        text-align: center;
+                        font-size: 22px;
+                        padding: 10px 0;
+                        &:hover {
+                            background: $backgroundColor;
+                        }
+                    }
+                }               
             }
             input {
                 outline: red;
@@ -518,47 +548,7 @@ section {
     }
     
 }
-.donate-now {
-  list-style-type: none;
-  margin: 25px 0 0 0;
-  padding: 0;
-  @include flex();
-  justify-content: space-between;
-  padding: 10px 0 50px 0;
-    li {
-    margin: 0 5px 0 0;
-    height: 40px;
-    }
-    label,
-    input {
-        display: block;
-    }
-    input {
-        display: none;
-    }
-    input[type="radio"] {
-        opacity: 0.01;
-        z-index: 100;
-    }
-    input[type="radio"]:checked+label,
-    .Checked+label {
-       background: rgba(255, 255, 255, 0.4); 
-    }
-    .donate-now-item {
-        label {
-            border: 1px solid #CCC;
-            cursor: pointer;
-            z-index: 90;
-            width: 100px;
-            text-align: center;
-            font-size: 22px;
-            padding: 10px 0;
-            &:hover {
-                background: $backgroundColor;
-            }
-        }
-    }
-}
+
 
 
 
