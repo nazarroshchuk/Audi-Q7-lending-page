@@ -467,7 +467,7 @@ section {
     .popup-content {
         position: relative;
         background-color: $textColorLight;
-        margin: 5% auto;
+        margin: 3% auto;
         width: 80%;
         width: 500px;
         background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
@@ -517,7 +517,6 @@ section {
     }
     
 }
-
 .donate-now {
   list-style-type: none;
   margin: 25px 0 0 0;
@@ -525,44 +524,41 @@ section {
   @include flex();
   justify-content: space-between;
   padding: 10px 0 50px 0;
+    li {
+    margin: 0 5px 0 0;
+    height: 40px;
+    }
+    label,
+    input {
+        display: block;
+    }
+    input {
+        display: none;
+    }
+    input[type="radio"] {
+        opacity: 0.01;
+        z-index: 100;
+    }
+    input[type="radio"]:checked+label,
+    .Checked+label {
+       background: rgba(255, 255, 255, 0.4); 
+    }
+    .donate-now-item {
+        label {
+            border: 1px solid #CCC;
+            cursor: pointer;
+            z-index: 90;
+            width: 100px;
+            text-align: center;
+            font-size: 22px;
+            padding: 10px 0;
+            &:hover {
+                background: $backgroundColor;
+            }
+        }
+    }
 }
 
-.donate-now li {
-  margin: 0 5px 0 0;
-  height: 40px;
-}
-
-.donate-now label,
-.donate-now input {
-  display: block;
-}
-.donate-now input {
-    display: none;
-}
-
-.donate-now input[type="radio"] {
-  opacity: 0.01;
-  z-index: 100;
-}
-
-.donate-now input[type="radio"]:checked+label,
-.Checked+label {
-  background: rgba(255, 255, 255, 0.4);
-}
-
-.donate-now .donate-now-item label {
-  border: 1px solid #CCC;
-  cursor: pointer;
-  z-index: 90;
-  width: 100px;
-  text-align: center;
-  font-size: 22px;
-  padding: 10px 0;
-}
-
-.donate-now label:hover {
-  background: $backgroundColor;
-}
 
 
 

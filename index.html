@@ -47,44 +47,44 @@
       <div class="popup-form">
         <form action="#" method="POST">
           <h2 class="popup-form-title">Choose the car of your dream</h2>
-          <div class="choose-car">
-            <ul class="donate-now">
-              <li class="donate-now-item">
-                <input type="radio" id="a25" name="amount" />
-                <label for="a25">Q7</label>
-              </li>
-              <li class="donate-now-item">
-                <input type="radio" id="a50" name="amount" />
-                <label for="a50">SQ7</label>
-              </li>
-              <li class="donate-now-item">
-                <input type="radio" id="a75" name="amount" checked="checked" />
-                <label for="a75">Q7 TFSI</label>
-              </li>
 
-            </ul>
+          <ul class="donate-now">
+            <li class="donate-now-item">
+              <input type="radio" id="a25" name="amount" />
+              <label for="a25">Q7</label>
+            </li>
+            <li class="donate-now-item">
+              <input type="radio" id="a50" name="amount" />
+              <label for="a50">SQ7</label>
+            </li>
+            <li class="donate-now-item">
+              <input type="radio" id="a75" name="amount" checked="checked" />
+              <label for="a75">Q7 TFSI</label>
+            </li>
 
-          </div>
+          </ul>
+
+
 
           <label for="name">Name:</label>
-          <input type="text" id="name" placeholder="First Name">
+          <input type="text" id="name" name="name" placeholder="First Name">
 
           <label for="lname">Last name:</label>
-          <input type="text" placeholder="Last Name">
+          <input type="text" id="lname" name="lname" placeholder="Last Name">
 
 
           <label for="tel">Phone:</label>
-          <input type="tel" placeholder="" value="+38 0" placeholder="00 000 00 00" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
-            required>
+          <input type="tel" id="tel" name="phone" value="+38 0" placeholder="00 000 00 00"
+            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
 
           <label for="mail">E-mail:</label>
-          <input type="mail" placeholder="E-mail">
+          <input type="mail" id="mail" name="date" placeholder="E-mail">
 
           <label for="date">Select the desired drive test date:</label>
-          <input type="date">
+          <input type="date" id="date" name="date">
 
           <label for="time">select the desired test drive time:</label>
-          <input type="time">
+          <input type="time" id="time" name="time">
 
           <input type="button" value="Get new emotion">
         </form>

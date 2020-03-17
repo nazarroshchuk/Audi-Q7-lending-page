@@ -518,7 +518,7 @@ section.video {
 }
 
 .popup {
-  display: block;
+  display: none;
   position: fixed;
   z-index: 10;
   left: 0;
@@ -535,7 +535,7 @@ section.video {
 .popup .popup-content {
   position: relative;
   background-color: #fff;
-  margin: 5% auto;
+  margin: 3% auto;
   width: 80%;
   width: 500px;
   background-color: rgba(0, 0, 0, 0.4);
@@ -659,7 +659,7 @@ section.video {
 }
 
 .donate-now input[type="radio"]:checked + label,
-.Checked + label {
+.donate-now .Checked + label {
   background: rgba(255, 255, 255, 0.4);
 }
 
@@ -673,7 +673,7 @@ section.video {
   padding: 10px 0;
 }
 
-.donate-now label:hover {
+.donate-now .donate-now-item label:hover {
   background: #690102;
 }
 /*# sourceMappingURL=style.css.map */
