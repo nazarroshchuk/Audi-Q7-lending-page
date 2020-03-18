@@ -500,16 +500,17 @@ section.video {
   cursor: pointer;
   outline: none;
   z-index: 5;
+  opacity: .6;
 }
 
 .slider-bottom .slick-next.slick-arrow {
-  background-image: url(images/baseline_arrow_right_alt_white_18dp.png);
+  background-image: url(../images/baseline_arrow_right_alt_white_18dp.png);
   top: 40%;
   right: 0;
 }
 
 .slider-bottom .slick-prev.slick-arrow {
-  background-image: url(images/baseline_arrow_left_alt_white_18dp.png);
+  background-image: url(../images/baseline_arrow_left_alt_white_18dp.png);
   top: 40%;
   left: 0;
 }
