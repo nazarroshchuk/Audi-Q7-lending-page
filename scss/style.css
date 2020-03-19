@@ -675,22 +675,26 @@ section.video {
   font-size: 10px;
 }
 
-form input#fname.invalid-color::-webkit-input-placeholder {
+form input#fname.invalid-color::-webkit-input-placeholder,
+form input#lname.invalid-color::-webkit-input-placeholder {
   color: #ff120acc;
   opacity: 1;
 }
 
-form input#fname.invalid-color:-ms-input-placeholder {
+form input#fname.invalid-color:-ms-input-placeholder,
+form input#lname.invalid-color:-ms-input-placeholder {
   color: #ff120acc;
   opacity: 1;
 }
 
-form input#fname.invalid-color::-ms-input-placeholder {
+form input#fname.invalid-color::-ms-input-placeholder,
+form input#lname.invalid-color::-ms-input-placeholder {
   color: #ff120acc;
   opacity: 1;
 }
 
-form input#fname.invalid-color::placeholder {
+form input#fname.invalid-color::placeholder,
+form input#lname.invalid-color::placeholder {
   color: #ff120acc;
   opacity: 1;
 }

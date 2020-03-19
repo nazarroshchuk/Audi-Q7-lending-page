@@ -551,7 +551,8 @@ section {
     
 }
 
-form input#fname.invalid-color::placeholder {
+form input#fname.invalid-color::placeholder,
+form input#lname.invalid-color::placeholder {
     color: $textColor;
     opacity: 1;
 }
