@@ -81,6 +81,29 @@
   }
 }
 
+@media (max-width: 550px) {
+  .popup .popup-content-wrap {
+    width: 300px;
+  }
+  .popup .popup-content-wrap .popup-form {
+    margin: 0px;
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.8);
+  }
+  .popup .popup-content-wrap form .donate-now .donate-now-item label {
+    width: 75px;
+    font-size: 20px;
+    padding: 10px 0;
+  }
+  .popup .popup-content-wrap form .donate-now {
+    margin: 50px 0 0 0;
+    padding: 0 0 20px 0;
+  }
+  .footer a.footer-btn {
+    padding: 15px 60px;
+  }
+}
+
 @media (max-width: 440px) {
   .header .header-content__title {
     margin-top: 20px;

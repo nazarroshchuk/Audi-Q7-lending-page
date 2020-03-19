@@ -530,32 +530,33 @@ section.video {
   /* Black w/ opacity */
 }
 
-.popup .popup-content {
+.popup .popup-content-wrap {
   position: relative;
   background-color: #fff;
-  margin: 3% auto;
-  width: 80%;
+  margin: 1% auto;
   width: 500px;
-  background-color: rgba(0, 0, 0, 0.4);
+  max-height: 800px;
+  background-color: rgba(0, 0, 0, 0.75);
   /* Black w/ opacity */
+  border-radius: 3px;
 }
 
-.popup .popup-content .close {
+.popup .popup-content-wrap .close {
   position: absolute;
   right: 5%;
-  top: 5%;
+  top: 2%;
   color: #fff;
   font-size: 50px;
   cursor: pointer;
 }
 
-.popup .popup-content .popup-form {
+.popup .popup-content-wrap .popup-form {
   margin: 0 auto;
-  margin: 30px;
-  padding: 50px;
+  margin: 0px;
+  padding: 20px 75px;
 }
 
-.popup .popup-content form {
+.popup .popup-content-wrap form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -571,9 +572,9 @@ section.video {
           justify-content: start;
 }
 
-.popup .popup-content form .donate-now {
+.popup .popup-content-wrap form .donate-now {
   list-style-type: none;
-  margin: 25px 0 0 0;
+  margin: 0;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -582,33 +583,33 @@ section.video {
       -ms-flex-pack: justify;
           justify-content: space-between;
   justify-content: space-between;
-  padding: 10px 0 50px 0;
+  padding: 35px 0 50px 0;
 }
 
-.popup .popup-content form .donate-now li {
+.popup .popup-content-wrap form .donate-now li {
   margin: 0 5px 0 0;
   height: 40px;
 }
 
-.popup .popup-content form .donate-now label,
-.popup .popup-content form .donate-now input {
+.popup .popup-content-wrap form .donate-now label,
+.popup .popup-content-wrap form .donate-now input {
   display: block;
 }
 
-.popup .popup-content form .donate-now input {
+.popup .popup-content-wrap form .donate-now input {
   display: none;
 }
 
-.popup .popup-content form .donate-now input[type="radio"] {
+.popup .popup-content-wrap form .donate-now input[type="radio"] {
   opacity: 0.01;
   z-index: 100;
 }
 
-.popup .popup-content form .donate-now input[type="radio"]:checked + label {
+.popup .popup-content-wrap form .donate-now input[type="radio"]:checked + label {
   background: rgba(255, 255, 255, 0.4);
 }
 
-.popup .popup-content form .donate-now .donate-now-item label {
+.popup .popup-content-wrap form .donate-now .donate-now-item label {
   border: 1px solid #CCC;
   cursor: pointer;
   z-index: 90;
@@ -618,11 +619,11 @@ section.video {
   padding: 10px 0;
 }
 
-.popup .popup-content form .donate-now .donate-now-item label:hover {
+.popup .popup-content-wrap form .donate-now .donate-now-item label:hover {
   background: #690102;
 }
 
-.popup .popup-content form input {
+.popup .popup-content-wrap form input {
   outline: red;
   padding-bottom: 12px;
   margin-bottom: 20px;
@@ -633,23 +634,23 @@ section.video {
   font-size: 16px;
 }
 
-.popup .popup-content form input::-webkit-input-placeholder {
+.popup .popup-content-wrap form input::-webkit-input-placeholder {
   color: #fff;
 }
 
-.popup .popup-content form input:-ms-input-placeholder {
+.popup .popup-content-wrap form input:-ms-input-placeholder {
   color: #fff;
 }
 
-.popup .popup-content form input::-ms-input-placeholder {
+.popup .popup-content-wrap form input::-ms-input-placeholder {
   color: #fff;
 }
 
-.popup .popup-content form input::placeholder {
+.popup .popup-content-wrap form input::placeholder {
   color: #fff;
 }
 
-.popup .popup-content form input[type=button] {
+.popup .popup-content-wrap form input[type=submit] {
   font-style: normal;
   font-weight: bold;
   border: 1px solid #FFFFFF;
@@ -662,15 +663,35 @@ section.video {
   font-size: 24px;
   line-height: 28px;
   cursor: pointer;
-  margin-top: 50px;
+  margin-top: 30px;
 }
 
-.popup .popup-content form input[type=button]:hover {
+.popup .popup-content-wrap form input[type=submit]:hover {
   background: #690102;
 }
 
-.popup .popup-content label {
+.popup .popup-content-wrap label {
   color: #fff;
   font-size: 10px;
+}
+
+form input#fname.invalid-color::-webkit-input-placeholder {
+  color: #ff120acc;
+  opacity: 1;
+}
+
+form input#fname.invalid-color:-ms-input-placeholder {
+  color: #ff120acc;
+  opacity: 1;
+}
+
+form input#fname.invalid-color::-ms-input-placeholder {
+  color: #ff120acc;
+  opacity: 1;
+}
+
+form input#fname.invalid-color::placeholder {
+  color: #ff120acc;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

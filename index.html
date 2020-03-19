@@ -42,10 +42,10 @@
   </header>
 
   <div class="popup">
-    <div class="popup-content">
+    <div class="popup-content-wrap">
       <span class="close">&times;</span>
       <div class="popup-form">
-        <form action="#" method="POST">
+        <form action="#" method="POST" id="popupForm">
           <h2 class="popup-form-title">Choose the car of your dream</h2>
 
           <ul class="donate-now">
@@ -64,25 +64,25 @@
           </ul>
 
           <label for="name">Name:</label>
-          <input type="text" id="name" name="name" placeholder="First Name">
+          <input type="text" id="fname" name="name" placeholder="First Name" pattern="[A-Za-z0-9]+" required value="">
 
           <label for="lname">Last name:</label>
-          <input type="text" id="lname" name="lname" placeholder="Last Name">
+          <input type="text" id="lname" name="lname" placeholder="Last Name" pattern="[A-Za-z0-9]+" required>
 
           <label for="tel">Phone:</label>
-          <input type="tel" id="tel" name="phone" value="+38 0" placeholder="00 000 00 00"
-            pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
+          <input type="tel" id="tel" name="phone" value="+38 0" placeholder="00 000 00 00" required
+            title="Numbers only, please." pattern="+38[0-9]{10}">
 
           <label for="mail">E-mail:</label>
-          <input type="mail" id="mail" name="date" placeholder="E-mail">
+          <input type="mail" id="mail" name="date" placeholder="E-mail" required>
 
           <label for="date">Select the desired drive test date:</label>
-          <input type="date" id="date" name="date">
+          <input type="date" id="date" name="date" required>
 
           <label for="time">select the desired test drive time:</label>
-          <input type="time" id="time" name="time">
+          <input type="time" id="time" name="time" required>
 
-          <input type="button" value="Get new emotion">
+          <input id="submitBtnForm" type="submit" value="Get new emotion">
         </form>
       </div>
     </div>

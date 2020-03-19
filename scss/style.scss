@@ -459,25 +459,26 @@ section {
     overflow: auto;
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-    .popup-content {
+    .popup-content-wrap {
         position: relative;
         background-color: $textColorLight;
-        margin: 3% auto;
-        width: 80%;
+        margin: 1% auto;
         width: 500px;
-        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+        max-height: 800px;
+        background-color: rgba(0,0,0,0.75); /* Black w/ opacity */
+        border-radius: 3px;
         .close {
             position: absolute;
             right: 5%;
-            top: 5%;
+            top: 2%;
             color: $textColorLight;
             font-size: 50px;
             cursor: pointer;
         }
         .popup-form {
             margin: 0 auto;
-            margin: 30px;
-            padding: 50px;
+            margin: 0px;
+            padding: 20px 75px;
         }
         form {
             @include flex();
@@ -485,11 +486,11 @@ section {
             justify-content: start;
             .donate-now {
                 list-style-type: none;
-                margin: 25px 0 0 0;
+                margin: 0;
                 padding: 0;
                 @include flex();
                 justify-content: space-between;
-                padding: 10px 0 50px 0;
+                padding: 35px 0 50px 0;
                 li {
                     margin: 0 5px 0 0;
                     height: 40px;
@@ -536,9 +537,9 @@ section {
                     color: $textColorLight;
                 }
             }
-            input[type=button] {
+            input[type=submit] {
                 @include button();
-                margin-top: 50px;
+                margin-top: 30px;
             }
         }
         label {
@@ -550,7 +551,10 @@ section {
     
 }
 
-
+form input#fname.invalid-color::placeholder {
+    color: $textColor;
+    opacity: 1;
+}
 
 
 

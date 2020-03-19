@@ -46,5 +46,16 @@ document.addEventListener('keydown', function (evt) {
     }
 });
 
+//Validation Form inputs
+function validationForm() {
+    var inputName = document.getElementById('fname');
+    if (inputName.value === '') {
+        inputName.placeholder = '*Invalid type';
+        inputName.classList.add('invalid-color');
+    }
+}
 
 
+
+var submitFormBtn = document.getElementById('submitBtnForm');
+submitFormBtn.addEventListener('click', validationForm);
