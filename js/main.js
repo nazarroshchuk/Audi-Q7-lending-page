@@ -46,22 +46,6 @@ document.addEventListener('keydown', function (evt) {
     }
 });
 
-//Validation Form inputs
-// function validationForm() {
-//     var inputName = document.getElementById('fname');
-//     if (inputName.value === '') {
-//         inputName.placeholder = '*Invalid type';
-//         inputName.classList.add('invalid-color');
-//     }
-//     var inputLastName = document.getElementById('lname');
-//     if (inputLastName.value === '') {
-//         inputLastName.placeholder = '*Invalide type';
-//         inputLastName.classList.add('invalid-color');
-//         return console.log(inputLastName);
-//     }
-
-// }
-
 function checkEmtpyValue(inputForCheck, textValid, nameOfclass) {
     if (inputForCheck.value === '') {
         inputForCheck.placeholder = textValid;
@@ -74,11 +58,6 @@ function validationForm() {
     var inputTel = document.getElementById('tel');
     checkEmtpyValue(inputName, '*Invalide type', 'invalid-color');
     checkEmtpyValue(inputLastName, '*Invalide type', 'invalid-color');
-    // var str = inputTel.value.toString();
-    // if (str.lenght <= 14) {
-    //     checkEmtpyValue(inputTel, '*Invalide type', 'invalid-color');
-    // }
-    // console.log(inputTel.value.typeof());
 }
 
 var submitFormBtn = document.getElementById('submitBtnForm');
