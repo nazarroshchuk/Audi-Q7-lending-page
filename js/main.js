@@ -12,7 +12,7 @@ $(function () {
 
     $('.close-btn').on('click', function () {
         $('.menu').removeClass('active');
-    })
+    });
 });
 
 const openPopupButton = document.getElementById('popupOpen');
